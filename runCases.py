@@ -6,6 +6,7 @@ import unittest
 import sys
 from public import HTMLTestRunner
 reload(sys)
+sys.path.append('.')
 sys.setdefaultencoding('utf8')  # @UndefinedVariable
 
 listcases = ".\\TestCase"
