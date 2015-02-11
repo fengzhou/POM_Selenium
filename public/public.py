@@ -51,28 +51,6 @@ class Method:
             if val == table.row_values(i)[0]:
                 return table.row_values(i)[1]
 
-    
-    def save_ok_pic(self, driver, name):
-        '''保存成功截图方法'''
-        try:
-            time.sleep(1)
-            now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
-            pic_path = '.\\report\\image\\%s-%s-ok.png' % (name, now)
-            print '截图保存路径为:\n%s' % os.path.abspath(pic_path)
-            driver.get_screenshot_as_file(pic_path)
-        except:
-            print u'保存截图失败'
-
-    def save_error_pic(self, driver, name):
-        '''保存失败截图方法'''
-        try:
-            time.sleep(1)
-            now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
-            pic_path = '.\\report\\image\\%s-%s-error.png' % (name, now)
-            print '截图保存路径为:\n%s' % os.path.abspath(pic_path)
-            driver.get_screenshot_as_file(pic_path)
-        except:
-            print u'保存截图失败'
             
     @staticmethod
     def castStatus(status):
